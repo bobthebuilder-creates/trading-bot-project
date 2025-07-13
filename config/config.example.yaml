@@ -1,0 +1,25 @@
+# Copy this to config.yaml and fill in real values
+
+development:
+  database_url: "postgresql://user:password@localhost:5432/trading_dev"
+  redis_url: "redis://localhost:6379"
+  
+production:
+  database_url: "postgresql://user:password@10.0.2.10:5432/trading_prod"
+  redis_url: "redis://10.0.2.10:6379"
+
+exchanges:
+  binance:
+    api_key: "your_binance_api_key_here"
+    api_secret: "your_binance_secret_here"
+    sandbox: true
+    
+  interactive_brokers:
+    host: "127.0.0.1"
+    port: 7497
+    client_id: 1
+
+risk_management:
+  max_position_size: 0.02  # 2% of portfolio
+  max_daily_loss: 0.05     # 5% daily loss limit
+  max_total_loss: 0.10     # 10% total loss limit
